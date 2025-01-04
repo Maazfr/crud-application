@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Student Management System</h1>
+    <div class="actions">
+      <button onclick="showAddStudentForm()">Add Student</button>
+      <button onclick="displayStudents()">Display Students</button>
+      <button onclick="showSearchStudentForm()">Search Student</button>
+    </div>
+
+    <div id="form-container" class="form-container hidden">
+      <form id="student-form">
+        <label for="roll-number">Roll Number:</label>
+        <input type="number" id="roll-number" required>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <button type="button" onclick="addStudent()">Submit</button>
+        <button type="button" onclick="closeForm()">Cancel</button>
+      </form>
+    </div>
+
+    <div id="students-list" class="students-list hidden">
+      <h2>List of Students</h2>
+      <ul id="students"></ul>
+      <button onclick="closeList()">Close</button>
+    </div>
+
+    <div id="search-container" class="form-container hidden">
+      <form id="search-form">
+        <label for="search-roll-number">Search Roll Number:</label>
+        <input type="number" id="search-roll-number" required>
+
+        <button type="button" onclick="searchStudent()">Search</button>
+        <button type="button" onclick="closeForm()">Cancel</button>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
